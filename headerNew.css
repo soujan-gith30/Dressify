@@ -1,0 +1,67 @@
+/* Reset some default styles for list items */
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Style the header */
+header {
+    background-color: #333; /* Choose your header background color */
+    color: #fff; /* Choose your header text color */
+    padding: 10px 0;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo img {
+    height: 50px; /* Adjust the logo height as needed */
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav li {
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff; /* Choose your link text color */
+    font-weight: bold;
+}
+
+.search-bar {
+    display: flex;
+}
+
+.search-bar input[type="text"] {
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+}
+
+.search-bar button {
+    background-color: #ff6600; /* Choose your button background color */
+    color: #fff; /* Choose your button text color */
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.user-links a {
+    color: #fff; /* Choose your link text color */
+    margin-left: 10px;
+    text-decoration: none;
+}

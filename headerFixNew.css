@@ -1,0 +1,46 @@
+/* Reset some default styles for the body and header */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333; /* Choose your header background color */
+    color: #fff; /* Choose your header text color */
+    padding: 10px 0;
+    transition: 0.3s; /* Add smooth transition for the fixed header effect */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Add the fixed header effect when the user scrolls down */
+.fixed-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Adjust the z-index as needed */
+}
+
+/* Add styles for the logo and navigation links within the fixed header */
+.fixed-header .logo img {
+    height: 50px; /* Adjust the logo height as needed */
+}
+
+.fixed-header nav ul {
+    display: flex;
+    list-style: none;
+}
+
+.fixed-header nav li {
+    margin-right: 20px;
+}
+
+.fixed-header nav a {
+    text-decoration: none;
+    color: #fff; /* Choose your link text color */
+    font-weight: bold;
+}
