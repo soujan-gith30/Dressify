@@ -1,0 +1,38 @@
+/* Styles for the image gallery */
+.image-gallery {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.slider {
+    position: relative;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: none; /* Hide all images by default */
+}
+
+.controls {
+    margin-top: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #333; /* Customize button background color */
+    color: #fff; /* Customize button text color */
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* Styles for the previous and next buttons */
+.prev-btn {
+    float: left;
+}
+
+.next-btn {
+    float: right;
+}

@@ -1,0 +1,15 @@
+<html>
+<head>
+<title>Table of Student's record</title>
+<body>
+	<table border="4" width="10" height="12" bgcolor="yellow" cellpadding="10"cellspacing="12" bordercolor="blue">
+		<tr><th>Roll</th><th>Name</th>Address</th><th>Mobile No.</th><th>Email Id.</th></tr>
+		<tr><td>1</th><th>Ayan</th>Kolkata</th><th>8456321487</th><th>ayan12@gmail.com</th></tr>
+		<tr><td>Roll</th><th>Ayushi</th>Howrah</th><th>6785421768</th><th>ayushidey40@gmail.com</th></tr>
+		<tr><th>Roll</th><th>Riya</th>Mumbai</th><th>9865297167</th><th>riya04@gmail.com</th></tr>
+		<tr><th>Roll</th><th>Rishav</th>Delhi</th><th>7865686567</th><th>rishavroy1784@gmail.com</th></tr>
+	
+	<hr color"red" width="80%" size="10px">
+</body>
+</head>
+</html>

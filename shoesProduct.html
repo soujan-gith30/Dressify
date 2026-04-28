@@ -1,0 +1,218 @@
+<html>
+<head>
+<title></title>
+</head>
+<body>
+<!-- Product:Start -->
+<section class="box">
+    <div class="content">
+  
+      <div class="left">
+        <div class="product_img"></div>
+        <div class="product_details">
+          <h4 class="title">Rings</h4>
+          <p class="discription">Ladies Rings with stone</p>
+          <p class="price">₹489 <span class="price_original">₹699</span> <span class="offer"> 70% OFF</span></p>
+          <p class="other">inclusive of all taxes</p>
+        </div>
+      </div>
+  
+      <div class="right">
+        <div class="product_description">
+          <h4>PRODUCT DESCRIPTION</h4>
+          <p>Elevate your style with this classy pair of Casual Shoes from the house of Our brand. Featuring a contemporary refined design with exceptional comfort, this pair is perfect to give your quintessential dressing an upgrade.
+          </p>
+          <p><span class="highlight">Country of Origin -</span>
+            India
+          </p>
+          <p><span class="highlight">Manufactured By -</span>
+            S.K. INTERNATIONAL AJUDD PURAM BAGDA TAHSIL AGRA U.P. <span class="special">282001, 9759860599, sheela.woakers@gmail.com</span>
+          </p>
+          <p><span class="highlight">Packed By -</span>
+            S.K. INTERNATIONAL AJUDD PURAM BAGDA TAHSIL AGRA U.P. <span class="special">282001, 9759860599, sheela.woakers@gmail.com</span>
+          </p>
+          <p><span class="highlight">Commodity -</span> Men's Casual Shoes
+          </p>
+          <button class="button button1">Add to Cart</button>
+          <button class="button button2">Buy Now</button>
+
+        </div>
+      </div>
+  
+    </div>
+  </section>
+  <!-- Product:End -->
+
+  <style>
+        @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Gasoek+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kablammo&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Nunito", sans-serif;
+}
+
+::root {
+  --color1: #53d3d1;
+  --color2: #002447;
+  --color3: #fbeceb;
+  --color4: #feb249;
+}
+
+body {
+  background: #002447;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+section {
+  background: #fbeceb;
+  width: 750px;
+  height: 420px;
+  border-radius: 5px;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Left Side:Start */
+.left {
+  display: block;
+  height: fit-content;
+  min-width: 250px;
+}
+.left .product_img {
+  height: 250px;
+  width: 230px;
+  margin: 10px;
+  border-radius: 5px;
+
+  background: url("shoesLadies.webp") no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.product_details {
+  text-align: left;
+  margin: 0 10px 10px;
+  padding: 5px;
+}
+.product_details .title {
+  font-size: 1.3em;
+  color: rgb(99, 99, 99);
+  font-weight: 900;
+}
+.product_details .discription {
+  margin-top: 2px;
+  font-size: 0.8em;
+  color: gray;
+}
+.product_details .price {
+  margin-top: 4px;
+  font-size: 1.1em;
+  font-weight: 600;
+  white-space: pre;
+}
+.product_details .price span {
+  font-weight: 500;
+}
+.product_details .price .price_original {
+  text-decoration: line-through;
+  font-size: 0.7em;
+  font-weight: 400;
+  color: gray;
+}
+.product_details .price .offer {
+  color: #03ac13;
+  font-weight: 600;
+}
+.product_details .other {
+  font-size: 0.8em;
+  color: grey;
+}
+/* Left Side:End */
+
+/* Right Side:Start */
+.right {
+  display: block;
+}
+.right .product_description {
+  text-align: left;
+  margin: 30px 20px;
+}
+.product_description h4 {
+  font-size: 0.9em;
+  font-weight: 900;
+  margin-bottom: 20px;
+}
+.product_description p {
+  font-size: 0.8em;
+  color: grey;
+  margin-bottom: 15px;
+}
+.product_description .highlight {
+  color: rgb(99, 99, 99);
+  font-weight: 900;
+}
+.product_description .special {
+  font-size: 0.85em;
+}
+.button {
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+.button1{
+    background-color: #e094d6;
+  }
+
+  .button2{
+    background-color: #6d4a68;
+  }
+/* Right Side:End */
+
+/* Responsiveness:Start */
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .content {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    border-radius: 0px;
+  }
+  section {
+    width: 100% !important;
+  }
+  .product_img {
+    width: calc(100vw - 6%) !important;
+    height: 350px !important;
+  }
+  h4.title {
+    font-size: 1em !important;
+  }
+  p {
+    width: 90%;
+  }
+  p.discription {
+    font-size: 0.7em !important;
+  }
+  p.other {
+    font-size: 0.7em !important;
+  }
+ 
+}
+/* Responsiveness:End */
+
+   </style> 
+</body>
+</html>
