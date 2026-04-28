@@ -1,0 +1,39 @@
+/* styles.css */
+#categories-offers {
+    background-color: #F8F0E5;
+    padding: 20px;
+	display: inline-block;
+text-decoration: none;
+text-align: center;
+align-items: center;
+
+}
+
+.category-gridOf {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr); /* Adjust the number of columns as needed */
+    gap: 9px;
+	padding-top: 14px;
+}
+
+.categoryO {
+    text-align: center;
+text-decoration: none;
+	font-size: 12%;
+	line-height: 1px;
+display: block;
+}
+
+.categoryO img {
+    max-width: 120%;
+    height: 290px;
+	width: 220px;
+    border: 1px solid #ddd;
+
+    margin-bottom: 10px;
+}
+
+
+h1{
+color: white;
+}

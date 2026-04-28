@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Dressify</title>
+        <link rel="stylesheet" href="./ecommerce.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link
+            href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css"
+            rel="stylesheet"
+        />
+	<link rel="<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">">
+    </head>
+    <body>
+<div class="row">
+  <div class="col l4 m8 s12 offset-m2 offset-l4">
+    <div class="product-card">
+      <div class="card  z-depth-4">
+        <div class="card-image">
+          <a href="#" class="btn-floating btn-large price waves-effect waves-light brown darken-3">5 €</a>
+          <!-- alternative image links:
+http://i58.photobucket.com/albums/g249/Landry_Bete/dessert14_zpsg6u4skv6.jpg
+https://www.dropbox.com/s/15xhr85exkhusgi/dessert14.jpg?raw=1 -->
+          <img src="https://res.cloudinary.com/landry-bete/image/upload/v1488769144/dessert14_trnhnj.jpg" alt="product-img">
+          <span class="card-title"><span>Macaron</span></span>
+        </div>
+        <ul class="card-action-buttons">
+          <li><a href="https://www.facebook.com/sharer/sharer.php?u=https://codepen.io/lybete/full/jBMNzM/" target="_blank" class="btn-floating waves-effect waves-light white"><i class="material-icons grey-text text-darken-3">share</i></a>
+          </li>
+          <li><a class="btn-floating waves-effect waves-light red accent-2"><i class="material-icons like">favorite_border</i></a>
+          </li>
+          <li><a id="buy" class="btn-floating waves-effect waves-light blue"><i class="material-icons buy">add_shopping_cart</i></a>
+          </li>
+        </ul>
+        <div class="card-content">
+          <div class="row">
+            <div class="col s12">
+              <p>
+                <strong>Description:</strong> <br />
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ornare auctor metus vel mollis.
+              </p>
+            </div>
+
+          </div>
+          <div class="row">
+            <div style="width: 95%; margin: auto;">
+              <div class="chip">Dessert</div>
+              <div class="chip">French</div>
+              <div class="chip">Sweet</div>
+              <div class="chip">Chocolate</div>
+              <div class="chip"><a href="#">More...</a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+.card-title {
+  font-weight: 300;
+  font-size: 2rem;
+}
+.product-card .card {
+  margin: 20px;
+  overflow: hidden;
+}
+.product-card .card .card-content {
+  padding: 5px;
+}
+.product-card .card .price {
+  width: 70px;
+  height: 70px;
+  font-weight: 600;
+  font-size: 1.45rem;
+  line-height: 70px;
+  margin: 10px;
+  position: absolute;
+  top: 0;
+  letter-spacing: 0;
+}
+.product-card ul.card-action-buttons {
+  margin: -18px 7px 0 0;
+  text-align: right;
+}
+.product-card ul.card-action-buttons li {
+  display: inline-block;
+  padding-left: 7px;
+}
+.product {
+  width: 20%;
+  padding: 10px;
+}
+.product .card {
+  margin: 0;
+}
+.product .card .card-content {
+  padding: 5px 10px;
+}
+</style>
+
+
+<script>
+jQuery(document).ready(function ($) {
+  //Buy button effects
+  $(".buy").on("click", function () {
+    //It is possible to put the 1st argument of setTimeout as callback of the Materialize.toast function but that approach seems significantly slower. I don't know why yet
+    setTimeout(function () {
+      $("#buy").removeClass("green");
+      $(".buy").fadeOut(100, function () {
+        $(this).text("add_shopping_cart").fadeIn(150);
+      });
+    }, 5000);
+
+    $("#buy").addClass("green");
+    $(".buy").fadeOut(100, function () {
+      $(this).text("check").fadeIn(150);
+    });
+
+    var $toastContent = $(
+      '<div class="flow-text">ORDERED! &nbsp <a href="#" class=" amber-text">MY CART</a></div>'
+    );
+    Materialize.toast($toastContent, 5000, "rounded");
+  });
+
+  //Like button effects
+
+  $(".like").on("click", function () {
+    setTimeout(function () {
+      $(".like").fadeOut(100, function () {
+        $(this).text("favorite_border").fadeIn(150);
+      });
+    }, 5000);
+
+    $(".like").fadeOut(100, function () {
+      $(this).text("favorite").fadeIn(150);
+    });
+
+    var $toastContent2 = $('<div class="flow-text">LIKED!</div>');
+    Materialize.toast($toastContent2, 5000, "pink rounded");
+  });
+});
+</script>
