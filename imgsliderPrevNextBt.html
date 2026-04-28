@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Image Slider</title>
+</head>
+<body>
+    <div class="slider-container">
+        <div class="slider">
+            <img src="C:\Users\susmi\OneDrive\Desktop\TICKETMOVIE\html5thSemtable\womenDressTopHeaderImg.webp" alt="Image 1">
+            <img src="C:\Users\susmi\OneDrive\Desktop\TICKETMOVIE\html5thSemtable\womenDressTopHeaderImg.webp" alt="Image 2">
+            <img src="image3.jpg" alt="Image 3">
+            <!-- Add more images as needed -->
+        </div>
+        <button class="prev-slide">&#8249;</button>
+        <button class="next-slide">&#8250;</button>
+    </div>
+
+	<style>/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.slider-container {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slider img {
+    width: 100%;
+    height: auto;
+}
+
+button.prev-slide,
+button.next-slide {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+button.prev-slide {
+    left: 10px;
+}
+
+button.next-slide {
+    right: 10px;
+}
+</style>
+    <script>// script.js
+const slider = document.querySelector('.slider');
+const prevSlide = document.querySelector('.prev-slide');
+const nextSlide = document.querySelector('.next-slide');
+let currentIndex = 0;
+
+nextSlide.addEventListener('click', () => {
+    currentIndex++;
+    if (currentIndex >= slider.children.length) {
+        currentIndex = 0;
+    }
+    updateSlider();
+});
+
+prevSlide.addEventListener('click', () => {
+    currentIndex--;
+    if (currentIndex < 0) {
+        currentIndex = slider.children.length - 1;
+    }
+    updateSlider();
+});
+
+function updateSlider() {
+    const translateX = -currentIndex * 100;
+    slider.style.transform = `translateX(${translateX}%)`;
+}
+</script>
+</body>
+</html>

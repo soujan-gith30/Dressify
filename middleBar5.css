@@ -1,0 +1,46 @@
+<style>
+    /* Styles for the slider container */
+    .slider-container {
+        position: relative;
+    }
+
+    /* Styles for the image slider */
+    .slider {
+        /* Your image slider styles */
+        width: 100%;
+        height: auto;
+    }
+
+    /* Styles for the feature bars container */
+    .feature-bars {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #f7f7f7; /* Background color for the bars container */
+        padding: 10px 20px; /* Adjust padding as needed */
+padding-left: 120px;
+padding-right: 92px;
+	color: black;
+    }
+
+    /* Styles for each feature bar */
+    .feature-bar {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+	color: black;
+    }
+
+    .feature-bar img {
+        width: 60px; /* Adjust icon size as needed */
+        height: 60px;
+        margin-bottom: 5px; /* Space between icon and text */
+    }
+
+    .feature-bar p {
+        font-size: 18px; /* Font size for the feature text */
+        font-weight: bold; /* Font weight */
+	clor: black;
+    }
+</style>

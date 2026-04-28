@@ -1,0 +1,50 @@
+<style>
+    /* Styles for the slider container */
+    .slider-container {
+        position: relative;
+    }
+
+    /* Styles for the image slider */
+    .slider {
+        /* Your image slider styles */
+        width: 100%;
+        height: auto;
+    }
+
+    /* Styles for the fixed navigation bar */
+    .fixed-bar {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background-color: #333; /* Background color for the bar */
+        color: #fff; /* Text color */
+border-color: white;
+    }
+
+    .fixed-bar ul {
+        display: flex;
+        justify-content: space-around;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+    }
+
+    /* Styles for each list item in the navigation bar */
+    .fixed-bar li {
+        text-align: center;
+        padding: 10px;
+    }
+
+    .fixed-bar img {
+        width: 30px; /* Adjust icon size as needed */
+        height: 28px;
+        margin-bottom: 5px; /* Space between icon and text */
+    }
+
+    .fixed-bar p {
+        font-size: 16px; /* Font size for the feature text */
+        font-weight: bold; /* Font weight */
+    }
+</style>

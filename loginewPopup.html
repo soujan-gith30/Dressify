@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Website</title>
+    <link rel="stylesheet" href="loginPopupPage4.css">
+</head>
+<body>
+    <!-- Your website content goes here -->
+
+    <!-- Login Popup -->
+    <div id="login-popup" class="popup">
+        <div class="popup-content">
+            <span class="close" id="close-popup">&times;</span>
+            <h2>Login</h2>
+	<form id="login-form" onsubmit="return validateForm()">
+	 <div class="form-group">
+		<span><i class="fab fa-google-plus-square"></i></span>
+            <form id="login-form">
+		<label for="username">Username:</label>
+                <input type="text" id="username" name="username" required><br>
+                
+			<br><label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+               		
+					<div class="row align-items-center remember">
+						<input type="checkbox">Remember Me
+					</div>
+					<div class="form-group">
+						<input type="submit" value="Login" class="btn float-right login_btn">
+					</div>
+				
+				<p id="error-message" class="error-message"></p>
+			</div>
+			<div class="card-footer">
+				<div class="d-flex justify-content-center links">
+					Don't have an account?<a href="#">Sign Up</a>
+				</div>
+				<div class="d-flex justify-content-center">
+					<a href="#">Forgot password?</a>
+				</div>
+			</form>
+                
+	
+        </div>
+	
+    </div>
+</div>
+</div>
+    <script src="scriptLoginPopup2.js"></script>
+</body>
+</html>

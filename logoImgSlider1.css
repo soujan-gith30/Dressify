@@ -1,0 +1,115 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Trirong", serif;
+}
+.navbar{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+nav{
+    flex: 1;
+    text-align: right;font-family: Arial, Helvetica, sans-serif;
+}
+nav ul{
+    display: inline-block;
+    list-style-type: none;
+}
+nav ul li{
+    display: inline-block;
+    margin-right: 20px ;
+}
+a{
+    text-decoration: none;
+    color: #C70039;
+}
+p{
+    color: #555;
+}
+.container{
+    max-width: 1300px;
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+@keyframes slide {
+    0% {
+       left:0px;
+       
+   }
+
+    15% {
+        left:0px;
+       
+   }
+
+    20% {
+        left:-1080px;
+       
+   }
+
+    32% {
+        left:-1080px;
+   }
+
+    35% {
+        left:-2160px;
+   }
+
+    47% {
+        left:-2160px;
+   }
+
+    50% {
+        left:-3240px;
+   }
+
+    63% {
+        left:-3240px;
+   }
+
+    66% {
+        left:-4320px;
+   }
+
+    79% {
+        left:-4320px;
+   }
+
+    82% {
+        left:-5400px;
+   }
+
+    100% {
+       left:0px;
+   }
+}
+.section .img-slider {
+    margin-top: 0.5%;
+    display:flex;
+    float:left;
+    position:relative;
+    width:1080px;
+    height:500px;
+    animation-name:slide;
+    animation-duration: 16s;
+    animation-iteration-count: infinite;
+    transition-duration:2s;
+}
+.categories{
+    margin: 20px 0;
+}
+.col-4{
+    flex-basis: 25%;
+    padding: 10px;
+    min-width: 200px;
+    margin-bottom: 50px;
+}
+.co9l-4 img{
+    width: 100%;
+    
+}
