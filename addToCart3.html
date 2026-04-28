@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styl.css">
+    <title>Simple Shopping Cart</title>
+</head>
+<body>
+    <h1>Product Catalog</h1>
+    <div class="product">
+        <img src="product1.jpg" alt="Product 1">
+        <h2>Product 1</h2>
+        <p>Price: $10.00</p>
+        <button class="add-to-cart" data-name="Product 1" data-price="10.00">Add to Cart</button>
+    </div>
+
+    <div class="product">
+        <img src="product2.jpg" alt="Product 2">
+        <h2>Product 2</h2>
+        <p>Price: $15.00</p>
+        <button class="add-to-cart" data-name="Product 2" data-price="15.00">Add to Cart</button>
+    </div>
+
+    <div class="cart">
+        <h1>Shopping Cart</h1>
+        <ul id="cart-items">
+        </ul>
+        <p>Total: $<span id="cart-total">0.00</span></p>
+    </div>
+
+	/* Styles for product and cart elements */
+
+<style>
+.product {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    display: inline-block;
+    width: 200px;
+}
+
+.cart {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+    float: right;
+    width: 300px;
+}
+
+/* Style for the "Add to Cart" button */
+.add-to-cart {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+/* Style for the cart item list */
+.cart-item {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+</style>
+    <script>// Initialize variables
+const addToCartButtons = document.querySelectorAll(".add-to-cart");
+const cartItemsList = document.getElementById("cart-items");
+const cartTotal = document.getElementById("cart-total");
+
+let cart = [];
+
+// Add event listeners to "Add to Cart" buttons
+addToCartButtons.forEach(button => {
+    button.addEventListener("click", () => {
+        const name = button.getAttribute("data-name");
+        const price = parseFloat(button.getAttribute("data-price"));
+        addItemToCart(name, price);
+    });
+});
+
+// Add an item to the cart
+function addItemToCart(name, price) {
+    const item = { name, price };
+    cart.push(item);
+    displayCart();
+}
+
+// Display the cart
+function displayCart() {
+    cartItemsList.innerHTML = "";
+    let total = 0;
+
+    cart.forEach(item => {
+        const li = document.createElement("li");
+        li.textContent = `${item.name} - $${item.price.toFixed(2)}`;
+        li.classList.add("cart-item");
+        cartItemsList.appendChild(li);
+        total += item.price;
+    });
+
+    cartTotal.textContent = total.toFixed(2);
+}
+</script>
+</body>
+</html>

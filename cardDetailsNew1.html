@@ -1,0 +1,91 @@
+<div class="product-card">
+    <img src="file:///C:/Users/susmi/OneDrive/Desktop/TICKETMOVIE/html5thSemtable/saree4.jpg" alt="Product Image">
+    <h3 class="product-name">Product Name</h3>
+    <p class="product-price">$20.00</p>
+    <p class="product-description">Product description goes here.</p>
+    <label for="size-select">Size:</label>
+    <select id="size-select">
+        <option value="small">Small</option>
+        <option value="medium">Medium</option>
+        <option value="large">Large</option>
+        <!-- Add more size options as needed -->
+    </select>
+    <button class="add-to-cart">Add to Cart</button>
+</div>
+<style>
+	.product-card {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+    max-width: 250px;
+    margin: 20px;
+}
+
+.product-card img {
+    max-width: 100%;
+    height: auto;
+}
+
+.product-name {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.product-price {
+    font-size: 1rem;
+}
+
+.product-description {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+label {
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+#size-select {
+    width: 100%;
+    padding: 5px;
+    margin: 5px 0;
+}
+
+.add-to-cart {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.add-to-cart:hover {
+    background-color: #0056b3;
+}
+
+</style>
+
+<script>
+document.querySelectorAll('.add-to-cart').forEach((button, index) => {
+    button.addEventListener('click', () => {
+        // Get product details for the clicked button
+        const product = {
+            name: document.querySelectorAll('.product-name')[index].textContent,
+            price: parseFloat(document.querySelectorAll('.product-price')[index].textContent.replace('$', '')),
+            size: document.querySelectorAll('#size-select')[index].value
+        };
+
+        // Add the product to the shopping cart (implement cart functionality here)
+        // You can send the selected product to a shopping cart function or an API
+        // to handle cart management.
+        addToCart(product);
+    });
+});
+
+function addToCart(product) {
+    // Implement cart logic here (e.g., add the product to the cart object)
+    // Update the cart UI as needed
+    console.log('Added to cart:', product);
+}
+</script>
